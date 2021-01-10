@@ -26,8 +26,8 @@ Hello World from the Server Side!
 
 ## UI
 
-Created using CRA. In order to build the UI:
-````
+Created using [CRA](https://github.com/facebook/create-react-app). In order to build the UI:
+```
 cd ui
 npm run build
 ```
