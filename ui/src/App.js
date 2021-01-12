@@ -20,10 +20,16 @@ export default function App() {
             <li>
               <Link to="/server-content">With Server Content</Link>
             </li>
+            <li>
+              <Link to="/server-content-with-db">With Server Content with DB</Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
+          <Route path="/server-content-with-db">
+            <ServerContentWithDb />
+          </Route>
           <Route path="/server-content">
             <ServerContent />
           </Route>
@@ -48,6 +54,24 @@ function StaticContent() {
 
 function ServerContent() {
   const url = 'http://rodo-sdm-api.xxx.sdm.network';
+  const [message, setMessage] = useState('');
+
+  fetch(`${url}/hello`)
+      .then(response => response.text())
+      .then(data => setMessage(data))
+      .catch(e => setMessage(`Server not available, url: ${url}`))
+
+  return (
+    <>
+      <div className="jumbotron text-center">
+        <h1 className="display-3">{message}</h1>
+      </div>
+    </>
+  );
+}
+
+function ServerContentWithDb() {
+  const url = 'http://rodo-sdm-full-api.xxx.sdm.network';
   const [message, setMessage] = useState('');
 
   fetch(`${url}/hello`)
