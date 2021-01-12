@@ -4,9 +4,11 @@ This repo contains 2 projects:
 * api: A very simple API
 * ui. A very simple UI
 
-## API
+## API & Full API
 
-Created using Spring Boot. In order to build the project and create the docker image just execute:
+Created using Spring Boot. In order to build any of the two projects and create the docker image execute similar steps, changing api by full-api when needed. 
+
+To build api:
 ```
 cd api
 mvn clean package
