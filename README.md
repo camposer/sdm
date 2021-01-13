@@ -2,7 +2,12 @@
 
 This repo contains 2 projects:
 * api: A very simple API
+* full-api: A very simple API with Database
 * ui. A very simple UI
+
+## Architecture
+
+![Architecture](architecture.png?raw=true "Architecture")
 
 ## API & Full API
 
